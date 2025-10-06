@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 46px;
+  background-color: #fff;
+  opacity: 0.8;
+  min-width: 158px;
+  margin: 0 auto;
+  justify-content: space-between;
+  border: 1px solid #fff;
+  padding: 10px 80px 10px 80px;
+  margin-right: 0;
+}
+
+.header__logo {
+  max-width: 94px;
+  height: 26px;
+  margin: 10px auto;
+}

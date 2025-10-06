@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 60px 0;
+  max-width: 1280px;
+}
+
+.footer__text {
+  font-family: "Poppins", "Arial", "Helvetica", sans-serif;
+  margin: 0;
+  font-size: 16px;
+  min-width: 104px;
+  line-height: 100%;
+  color: #212121;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 630px) and (min-width: 320px) {
+  .footer {
+    min-width: 320px;
+  }
+}
