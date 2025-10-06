@@ -39,7 +39,9 @@
 }
 
 .profile__name {
+  max-width: 420px;
   display: -webkit-box;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -55,6 +57,8 @@
 }
 
 .profile__description {
+  max-width: 420px;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   display: -webkit-box;
   -webkit-box-orient: vertical;
