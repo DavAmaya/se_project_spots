@@ -16,9 +16,7 @@ This is an interactive image-sharing application, where users can add and remove
 
 [Spots](https://davamaya.github.io/se_project_spots/index.html)
 
-**Project Video**
-
-<iframe src="https://drive.google.com/file/d/15ozkRrkUJcevsxdtbJHabEP5FlkTe5KZ/view?usp=drive_link" width="640" height="480" allow="autoplay"></iframe>
+[**Project Video**](https://drive.google.com/file/d/15ozkRrkUJcevsxdtbJHabEP5FlkTe5KZ/view?usp=drive_link)
 
 **Figma**
 
