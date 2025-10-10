@@ -18,6 +18,8 @@ This is an interactive image-sharing application, where users can add and remove
 
 **Project Video**
 
+<video controls src="https://drive.google.com/file/d/15ozkRrkUJcevsxdtbJHabEP5FlkTe5KZ/view?usp=drive_link" title="Title"></video>
+
 **Figma**
 
 - [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
