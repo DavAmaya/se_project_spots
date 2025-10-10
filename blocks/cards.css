@@ -10,6 +10,7 @@
   padding-bottom: 40px;
 }
 
+/* Card list in grid */
 .cards__list {
   display: grid;
   padding-left: 0;
@@ -19,11 +20,14 @@
   list-style: none;
 }
 
+/* Card item */
 .cards__item {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+/* Card content */
 
 .cards__image {
   width: 413px;
@@ -41,6 +45,7 @@
 
 .cards__title {
   margin: 0;
+  font-family: "Poppins", "Arial", "Helvetica", sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 100%;
