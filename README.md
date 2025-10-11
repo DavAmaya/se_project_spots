@@ -3,6 +3,7 @@
 ### Overview
 
 - Intro
+- Technologies and Techniques
 - GitHub Page
 - Project Video
 - Figma
@@ -11,6 +12,17 @@
 **Intro**
 
 This is an interactive image-sharing application, where users can add and remove images, modify their profile, and like other user images that they post.
+
+**Technologies and Techniques**
+
+- HTML
+- CSS
+  - Flex
+  - Grid
+  - Responsive Layout
+  - @font face
+- BEM Methology
+- Figma
 
 **GitHub Page**
 
