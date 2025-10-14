@@ -6,28 +6,14 @@
   margin: 0 auto;
   font-size: 16px;
   line-height: 20px;
-  min-width: 1320px;
 }
 
 .content {
   padding: 0 20px;
 }
 
-@media screen and (min-width: 880px) and (max-width: 1320px) {
-  .page {
-    min-width: 880px;
-  }
-}
-@media screen and (min-width: 630px) and (max-width: 880px) {
-  .page {
-    min-width: 630px;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 630px) {
+@media screen and (max-width: 627px) {
   .page {
     min-width: 320px;
-  }
-  .content {
-    padding: 0 16px;
   }
 }
