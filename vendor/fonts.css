@@ -6,26 +6,10 @@
   src: url("./fonts/Poppins/Poppins-Regular.ttf") format("truetype");
 }
 
-/* Poppins Italic */
-@font-face {
-  font-family: "Poppins";
-  font-style: italic;
-  font-weight: 400;
-  src: url("./fonts/Poppins/Poppins-Italic.ttf") format("truetype");
-}
-
 /* Poppins Medium */
 @font-face {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   src: url("./fonts/Poppins/Poppins-Medium.ttf") format("truetype");
-}
-
-/* Poppins Medium Italic */
-@font-face {
-  font-family: "Poppins";
-  font-style: italic;
-  font-weight: 500;
-  src: url("./fonts/Poppins/Poppins-MediumItalic.ttf") format("truetype");
 }

@@ -1,12 +1,10 @@
 .header {
   display: flex;
   background-color: #fff;
-  opacity: 0.8;
   min-width: 158px;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  border: 1px solid #fff;
   padding: 10px 0;
 }
 
