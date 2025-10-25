@@ -1,0 +1,70 @@
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    visibility: hidden;
+    background-color: #00000080;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__is-opened { 
+    visibility: visible;
+}
+
+.modal__container {
+    background-color: #fff;
+    max-width: 730px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 32px 50px;
+    position: relative;
+}
+
+.modal__close-btn {
+    position: absolute;
+    top: 32px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+}
+
+.modal__title {
+    font-family: "Poppins", "Arial", "Helvetica", sans-serif;
+    color: #212121;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0 0 32px;
+    text-align:left;
+    line-height: 100%;
+    font-size: 32px;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.modal__label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-style: normal;
+    color: #212121B2;
+    font-family: "Poppins", "Arial", "Helvetica", sans-serif;
+    line-height: 110%;
+    font-size: 16px;
+    gap: 8px;
+}
+
+.modal__input {
+    max-width: 630px;
+    width: 100%;
+    border-color: #21212166;
+    border-radius: 8px;
+    padding: 16px 12px;
+}
