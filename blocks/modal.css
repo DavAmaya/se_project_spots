@@ -11,8 +11,8 @@
     align-items: center;
 }
 
-.modal__is-opened { 
-    visibility: hidden;
+.modal_is_opened { 
+    visibility: visible;
 }
 
 .modal__container {
@@ -40,6 +40,7 @@
 
 .modal__close-btn:hover {
     opacity: 100;
+    cursor: pointer;
 }
 
 .modal__title {
