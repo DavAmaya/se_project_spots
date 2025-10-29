@@ -23,6 +23,9 @@ function editProfileHandler(e) {
     editProfileModal.classList.remove("modal_is_opened")
 
     e.target.reset();
+    
+    formName.value = profileName.textContent;
+    formDescription.value = profileDescription.textContent;
 
 }
 editProfileForm.addEventListener("submit", (e) => {
