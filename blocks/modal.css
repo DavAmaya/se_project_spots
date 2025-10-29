@@ -9,9 +9,14 @@
     background-color: #00000080;
     justify-content: center;
     align-items: center;
+    opacity:0;
+    transition:opacity 1s linear, visibility 1s linear;
 }
 
-.modal_is_opened { 
+
+
+.modal.modal_is_opened { 
+    opacity: 1;
     visibility: visible;
 }
 
