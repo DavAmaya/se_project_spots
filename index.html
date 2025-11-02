@@ -36,16 +36,20 @@
             <div class="profile__info-container">
               <div class="profile__info">
                 <h1 class="profile__name">Bessie Coleman</h1>
-                <p class="profile__description">Known mononymously as Akon (/ˈeɪkɒn/), is a Senegalese-American singer, record producer, and entrepreneur. An influential figure in modern world...
+                <p class="profile__description">
+                  Known mononymously as Akon (/ˈeɪkɒn/), is a
+                  Senegalese-American singer, record producer, and entrepreneur.
+                  An influential figure in modern world music, he is best known
+                  for
                 </p>
               </div>
-              <button class="profile__edit-button">
+              <button type="button" class="profile__edit-button">
                 <img src="./images/edit-icon.svg" alt="edit profile" />
                 Edit Profile
               </button>
             </div>
           </div>
-          <button class="profile__add-button">
+          <button type="button" class="profile__add-button">
             <img src="./images/plus-icon.svg" alt="add post" />
             New Post
           </button>
@@ -60,7 +64,11 @@
               />
               <div class="card__info">
                 <h2 class="card__title">Val Thorens</h2>
-                <button class="card__like-button"></button>
+                <button
+                  type="button"
+                  aria-label="like"
+                  class="card__like-button"
+                ></button>
               </div>
             </li>
             <li class="card">
@@ -71,7 +79,11 @@
               />
               <div class="card__info">
                 <h2 class="card__title">Resturant terrace</h2>
-                <button class="card__like-button"></button>
+                <button
+                  type="button"
+                  aria-label="like"
+                  class="card__like-button"
+                ></button>
               </div>
             </li>
             <li class="card">
@@ -82,7 +94,11 @@
               />
               <div class="card__info">
                 <h2 class="card__title">An outdoor cafe</h2>
-                <button class="card__like-button"></button>
+                <button
+                  type="button"
+                  aria-label="like"
+                  class="card__like-button"
+                ></button>
               </div>
             </li>
             <li class="card">
@@ -93,9 +109,13 @@
               />
               <div class="card__info">
                 <h2 class="card__title">
-                  A very long bridge, over the forrest...
+                  A very long bridge, over the forrest
                 </h2>
-                <button class="card__like-button"></button>
+                <button
+                  type="button"
+                  aria-label="like"
+                  class="card__like-button"
+                ></button>
               </div>
             </li>
             <li class="card">
@@ -106,7 +126,11 @@
               />
               <div class="card__info">
                 <h2 class="card__title">Tunnel with morning light</h2>
-                <button class="card__like-button"></button>
+                <button
+                  type="button"
+                  aria-label="like"
+                  class="card__like-button"
+                ></button>
               </div>
             </li>
             <li class="card">
@@ -117,7 +141,11 @@
               />
               <div class="card__info">
                 <h2 class="card__title">Mountain house</h2>
-                <button class="card__like-button"></button>
+                <button
+                  type="button"
+                  aria-label="like"
+                  class="card__like-button"
+                ></button>
               </div>
             </li>
           </ul>
@@ -128,16 +156,28 @@
       </footer>
       <div id="edit-profile-modal" class="modal">
         <div class="modal__container">
-          <button class="modal__close-btn"><img src="./images/close-icon.svg" alt="close" /></button>
+          <button type="button" aria-label="close" class="modal__close-btn">
+            <img src="./images/close-icon.svg" alt="close" />
+          </button>
           <h2 class="modal__title">Edit Profile</h2>
           <form id="edit-profile-form" class="modal__form">
             <label for="profile-name-input" class="modal__label">
               Name
-              <input type="text" class="modal__input" placeholder="Type your name" id="profile-name-input">
+              <input
+                type="text"
+                class="modal__input"
+                placeholder="Type your name"
+                id="profile-name-input"
+              />
             </label>
             <label for="profile-description-input" class="modal__label">
               Description
-              <input type="text" class="modal__input" placeholder="Describe yourself" id="profile-description-input">
+              <input
+                type="text"
+                class="modal__input"
+                placeholder="Describe yourself"
+                id="profile-description-input"
+              />
             </label>
             <button class="modal__submit-btn" type="submit">Save</button>
           </form>
@@ -145,16 +185,28 @@
       </div>
       <div id="new-post-modal" class="modal">
         <div class="modal__container">
-          <button class="modal__close-btn"><img src="./images/close-icon.svg" alt="close" /></button>
+          <button type="button" aria-label="close" class="modal__close-btn">
+            <img src="./images/close-icon.svg" alt="close" />
+          </button>
           <h2 class="modal__title">New post</h2>
           <form id="new-post-form" class="modal__form">
             <label for="post-url-input" class="modal__label">
               Image link
-              <input type="text" class="modal__input" placeholder="Paste a link to the picture" id="post-url-input">
+              <input
+                type="text"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+                id="post-url-input"
+              />
             </label>
             <label for="post-caption-input" class="modal__label">
               Caption
-              <input type="text" class="modal__input" placeholder="Type your caption" id="post-caption-input">
+              <input
+                type="text"
+                class="modal__input"
+                placeholder="Type your caption"
+                id="post-caption-input"
+              />
             </label>
             <button class="modal__submit-btn" type="submit">Save</button>
           </form>
