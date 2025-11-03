@@ -27,6 +27,13 @@ function closeModal(e) {
 
 //open and close edit profile modal
 editProfile.addEventListener("click", (e) => {
+  const profileName = document.querySelector(".profile__name");
+  const profileDescription = document.querySelector(".profile__description");
+  const formName = document.querySelector("#profile-name-input");
+  const formDescription = document.querySelector("#profile-description-input");
+
+  formName.value = profileName.textContent;
+  formDescription.value = profileDescription.textContent;
   openModal(e);
 });
 
