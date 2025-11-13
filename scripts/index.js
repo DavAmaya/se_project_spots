@@ -35,20 +35,12 @@ const newPostModal = document.querySelector("#new-post-modal");
 const newPostClose = newPostModal.querySelector(".modal__close-btn");
 
 //open and close modal
-function openModal(e) {
-  if (e.target.classList.contains("profile__edit-button")) {
-    editProfileModal.classList.add("modal_is_opened");
-  } else if (e.target.classList.contains("profile__add-button")) {
-    newPostModal.classList.add("modal_is_opened");
-  }
+function openModal(modal) {
+  modal.classList.add("modal_is_opened");
 }
 
-function closeModal(e) {
-  if (e.target.classList.contains("profile__edit-button")) {
-    editProfileModal.classList.remove("modal_is_opened");
-  } else if (e.target.classList.contains("profile__add-button")) {
-    newPostModal.classList.remove("modal_is_opened");
-  }
+function closeModal(modal) {
+  modal.classList.remove("modal_is_opened");
 }
 
 //open and close edit profile modal
@@ -60,20 +52,20 @@ editProfile.addEventListener("click", (e) => {
 
   formName.value = profileName.textContent;
   formDescription.value = profileDescription.textContent;
-  openModal(e);
+  openModal(editProfileModal);
 });
 
 editProfileClose.addEventListener("click", (e) => {
-  closeModal(e);
+  closeModal(editProfileModal);
 });
 
 //open and close new post modal
 newPost.addEventListener("click", (e) => {
-  openModal(e);
+  openModal(newPostModal);
 });
 
 newPostClose.addEventListener("click", (e) => {
-  closeModal(e);
+  closeModal(newPostModal);
 });
 
 //card setup
