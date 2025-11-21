@@ -31,7 +31,14 @@ editProfileForm.addEventListener("submit", (e) => {
 function newPostHandler(e) {
   e.preventDefault();
 
-  console.log(formImageURL.value + ", " + formCaption.value);
+  const post = {
+    link: formImageURL.value,
+    name: formCaption.value,
+  };
+
+  const cardElement = getCardElement(post);
+
+  cardsConatiner.prepend(cardElement);
 
   newPostModal.classList.remove("modal_is_opened");
 

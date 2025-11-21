@@ -67,8 +67,3 @@ newPost.addEventListener("click", (e) => {
 newPostClose.addEventListener("click", (e) => {
   closeModal(newPostModal);
 });
-
-//card setup
-initialCards.forEach((card) => {
-  console.log(`Card Name: ${card.name}`);
-});

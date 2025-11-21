@@ -56,98 +56,20 @@
         </section>
         <section class="cards">
           <ul class="cards__list">
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Photo By Moritz Feldmann From Pexels"
-              />
-              <div class="card__info">
-                <h2 class="card__title">Val Thorens</h2>
-                <button
-                  type="button"
-                  aria-label="like"
-                  class="card__like-button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/2-photo-by-ceiline-from-pexels.jpg"
-                alt="Photo By Ceiline From Pexels"
-              />
-              <div class="card__info">
-                <h2 class="card__title">Resturant terrace</h2>
-                <button
-                  type="button"
-                  aria-label="like"
-                  class="card__like-button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-                alt="Photo By Tubanur Dogan From Pexels"
-              />
-              <div class="card__info">
-                <h2 class="card__title">An outdoor cafe</h2>
-                <button
-                  type="button"
-                  aria-label="like"
-                  class="card__like-button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="Photo By Maurice Laschet From Pexels"
-              />
-              <div class="card__info">
-                <h2 class="card__title">
-                  A very long bridge, over the forrest
-                </h2>
-                <button
-                  type="button"
-                  aria-label="like"
-                  class="card__like-button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                alt="Photo By Van Anh Nguyen From Pexels"
-              />
-              <div class="card__info">
-                <h2 class="card__title">Tunnel with morning light</h2>
-                <button
-                  type="button"
-                  aria-label="like"
-                  class="card__like-button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Photo By Moritz Feldmann From Pexels"
-              />
-              <div class="card__info">
-                <h2 class="card__title">Mountain house</h2>
-                <button
-                  type="button"
-                  aria-label="like"
-                  class="card__like-button"
-                ></button>
-              </div>
-            </li>
+            <template id="cards__template">
+              <li class="card">
+                <button type="button" class="card__delete-button"></button>
+                <img class="card__image" />
+                <div class="card__info">
+                  <h2 class="card__title"></h2>
+                  <button
+                    type="button"
+                    aria-label="like"
+                    class="card__like-button"
+                  ></button>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -212,8 +134,24 @@
           </form>
         </div>
       </div>
+      <div id="post-modal" class="modal">
+        <div class="modal__container modal__container_post">
+          <div class="modal__image-container">
+            <button
+              type="button"
+              aria-label="close"
+              class="modal__close-btn modal__close-btn_post"
+            >
+              <img src="./images/close-icon.svg" alt="close" />
+            </button>
+            <img class="modal__image" />
+          </div>
+          <p class="modal__caption"></p>
+        </div>
+      </div>
     </div>
     <script src="./scripts/index.js"></script>
     <script src="./scripts/formSubmit.js"></script>
+    <script src="./scripts/cards.js"></script>
   </body>
 </html>
