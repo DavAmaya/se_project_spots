@@ -12,6 +12,7 @@
   height: 413px;
   border-radius: 8px;
   border: none;
+  object-fit: cover;
   cursor: pointer;
 }
 

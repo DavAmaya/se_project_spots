@@ -35,7 +35,7 @@
   border: none;
   top: 27px;
   right: 50px;
-  opacity: 40%;
+  opacity: 0.4;
   transition: opacity 0.2s ease-in-out;
   cursor: pointer;
 }
@@ -168,7 +168,6 @@
 
 .modal__close-btn_post:hover {
   opacity: 0.4;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 630px) and (min-width: 320px) {

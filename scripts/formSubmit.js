@@ -19,7 +19,7 @@ function editProfileHandler(e) {
   profileName.textContent = formName.value;
   profileDescription.textContent = formDescription.value;
 
-  editProfileModal.classList.remove("modal_is_opened");
+  closeModal(editProfileModal);
 
   e.target.reset();
 }
@@ -40,7 +40,7 @@ function newPostHandler(e) {
 
   cardsConatiner.prepend(cardElement);
 
-  newPostModal.classList.remove("modal_is_opened");
+  closeModal(newPostModal);
 
   e.target.reset();
 }

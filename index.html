@@ -59,7 +59,7 @@
             <template id="cards__template">
               <li class="card">
                 <button type="button" class="card__delete-button"></button>
-                <img class="card__image" />
+                <img class="card__image" alt="" />
                 <div class="card__info">
                   <h2 class="card__title"></h2>
                   <button
@@ -118,6 +118,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Paste a link to the picture"
+                required
                 id="post-url-input"
               />
             </label>
@@ -126,6 +127,7 @@
               <input
                 type="text"
                 class="modal__input"
+                required
                 placeholder="Type your caption"
                 id="post-caption-input"
               />
@@ -143,7 +145,7 @@
           >
             <img src="./images/close-icon.svg" alt="close" />
           </button>
-          <img class="modal__image" />
+          <img class="modal__image" src="#" alt="" />
           <p class="modal__caption"></p>
         </div>
       </div>

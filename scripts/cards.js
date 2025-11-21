@@ -2,7 +2,7 @@ const cardTemplate = document
   .querySelector("#cards__template")
   .content.querySelector(".card");
 
-const cardsConatiner = document.querySelector(".cards__list");
+const cardsContainer = document.querySelector(".cards__list");
 
 //post image popup selectors
 const postModal = document.querySelector("#post-modal");
@@ -42,16 +42,16 @@ const getCardElement = (data) => {
     postCaption.textContent = data.name;
   });
 
-  postModalClose.addEventListener("click", () => {
-    closeModal(postModal);
-  });
-
   return cardElement;
 };
+
+postModalClose.addEventListener("click", () => {
+  closeModal(postModal);
+});
 
 //card setup
 initialCards.forEach((card) => {
   //card element setup
   const cardElement = getCardElement(card);
-  cardsConatiner.append(cardElement);
+  cardsContainer.append(cardElement);
 });
