@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!-- saved from url=(0112)http://127.0.0.1:5500/Sprint-3-Adaptive-Web-Design-and-Working-with-Layouts/projects/se_project_spots/index.html -->
+<html lang="en-US" style="transition-property: none; margin-right: 0px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Spots</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="David Amaya Hernandez">
+    <meta name="description" content="Spots is a social app where you can post your favorite images and share them with your friends. You can also comment on other people&#39;s posts and like them.">
+    <meta name="keywords" content="Spots, friends, photos, photo sharing, social media app">
+    
+    
+  <style id="ReanimatedPredefinedWebAnimationsStyle"></style><style id="ReanimatedCustomWebAnimationsStyle"></style><link rel="stylesheet" href="./Spots_files/index.css"><link rel="icon" href="http://127.0.0.1:5500/Sprint-3-Adaptive-Web-Design-and-Working-with-Layouts/projects/se_project_spots/favicon.ico"></head>
+  <body data-new-gr-c-s-check-loaded="14.1263.0" data-gr-ext-installed="">
+    <div class="page">
+      <header class="header">
+        <img class="header__logo" src="./Spots_files/header-spots-logo.svg" alt="Spots Logo">
+      </header>
+      <main class="content">
+        <section class="profile">
+          <div class="profile__container">
+            <img class="profile__avatar" src="./Spots_files/avatar.jpg" alt="profile avatar">
+            <div class="profile__info-container">
+              <div class="profile__info">
+                <h1 class="profile__name">Bessie Coleman</h1>
+                <p class="profile__description">
+                  Known mononymously as Akon (/ˈeɪkɒn/), is a
+                  Senegalese-American singer, record producer, and entrepreneur.
+                  An influential figure in modern world music, he is best known
+                  for
+                </p>
+              </div>
+              <button type="button" class="profile__edit-button">
+                <img src="./Spots_files/edit-icon.svg" alt="edit profile">
+                Edit Profile
+              </button>
+            </div>
+          </div>
+          <button type="button" class="profile__add-button">
+            <img src="./Spots_files/plus-icon.svg" alt="add post">
+            New Post
+          </button>
+        </section>
+        <section class="cards">
+          <ul class="cards__list"><li class="card">
+                <button type="button" class="card__delete-button"></button>
+                <img class="card__image" src="./Spots_files/7-photo-by-griffin-wooldridge-from-pexels.jpg" alt="landscape">
+                <div class="card__info">
+                  <h2 class="card__title">landscape</h2>
+                  <button type="button" aria-label="like" class="card__like-button"></button>
+                </div>
+              </li>
+            <template id="cards__template"></template>
+          <li class="card">
+                <button type="button" class="card__delete-button"></button>
+                <img class="card__image" src="./Spots_files/1-photo-by-moritz-feldmann-from-pexels.jpg" alt="Val Thorens">
+                <div class="card__info">
+                  <h2 class="card__title">Val Thorens</h2>
+                  <button type="button" aria-label="like" class="card__like-button"></button>
+                </div>
+              </li><li class="card">
+                <button type="button" class="card__delete-button"></button>
+                <img class="card__image" src="./Spots_files/2-photo-by-ceiline-from-pexels.jpg" alt="Restaurant terrace">
+                <div class="card__info">
+                  <h2 class="card__title">Restaurant terrace</h2>
+                  <button type="button" aria-label="like" class="card__like-button"></button>
+                </div>
+              </li><li class="card">
+                <button type="button" class="card__delete-button"></button>
+                <img class="card__image" src="./Spots_files/3-photo-by-tubanur-dogan-from-pexels.jpg" alt="An outdoor cafe">
+                <div class="card__info">
+                  <h2 class="card__title">An outdoor cafe</h2>
+                  <button type="button" aria-label="like" class="card__like-button"></button>
+                </div>
+              </li><li class="card">
+                <button type="button" class="card__delete-button"></button>
+                <img class="card__image" src="./Spots_files/4-photo-by-maurice-laschet-from-pexels.jpg" alt="A very long bridge, over the forest and through the trees">
+                <div class="card__info">
+                  <h2 class="card__title">A very long bridge, over the forest and through the trees</h2>
+                  <button type="button" aria-label="like" class="card__like-button"></button>
+                </div>
+              </li><li class="card">
+                <button type="button" class="card__delete-button"></button>
+                <img class="card__image" src="./Spots_files/5-photo-by-van-anh-nguyen-from-pexels.jpg" alt="Tunnel with morning light">
+                <div class="card__info">
+                  <h2 class="card__title">Tunnel with morning light</h2>
+                  <button type="button" aria-label="like" class="card__like-button"></button>
+                </div>
+              </li><li class="card">
+                <button type="button" class="card__delete-button"></button>
+                <img class="card__image" src="./Spots_files/6-photo-by-moritz-feldmann-from-pexels.jpg" alt="Mountain house">
+                <div class="card__info">
+                  <h2 class="card__title">Mountain house</h2>
+                  <button type="button" aria-label="like" class="card__like-button"></button>
+                </div>
+              </li></ul>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__text">2025 © David Amaya</p>
+      </footer>
+      <div id="edit-profile-modal" class="modal">
+        <div class="modal__container">
+          <button type="button" aria-label="close" class="modal__close-btn">
+            <img src="./Spots_files/close-icon.svg" alt="close">
+          </button>
+          <h2 class="modal__title">Edit Profile</h2>
+          <form id="edit-profile-form" class="modal__form">
+            <label for="profile-name-input" class="modal__label">
+              Name
+              <input type="text" class="modal__input" placeholder="Type your name" id="profile-name-input">
+            </label>
+            <label for="profile-description-input" class="modal__label">
+              Description
+              <input type="text" class="modal__input" placeholder="Describe yourself" id="profile-description-input">
+            </label>
+            <button class="modal__submit-btn" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+      <div id="new-post-modal" class="modal">
+        <div class="modal__container">
+          <button type="button" aria-label="close" class="modal__close-btn">
+            <img src="./Spots_files/close-icon.svg" alt="close">
+          </button>
+          <h2 class="modal__title">New post</h2>
+          <form id="new-post-form" class="modal__form">
+            <label for="post-url-input" class="modal__label">
+              Image link
+              <input type="text" class="modal__input" placeholder="Paste a link to the picture" id="post-url-input">
+            </label>
+            <label for="post-caption-input" class="modal__label">
+              Caption
+              <input type="text" class="modal__input" placeholder="Type your caption" id="post-caption-input">
+            </label>
+            <button class="modal__submit-btn" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+      <div id="post-modal" class="modal modal_type_image-preview">
+        <div class="modal__image-container">
+          <button type="button" aria-label="close" class="modal__close-btn modal__close-btn_post">
+            <img src="./Spots_files/close-icon.svg" alt="close">
+          </button>
+          <img class="modal__image" src="./Spots_files/1-photo-by-moritz-feldmann-from-pexels.jpg" alt="Val Thorens">
+          <p class="modal__caption">Val Thorens</p>
+        </div>
+      </div>
+    </div>
+    <script src="./Spots_files/index.js"></script>
+    <script src="./Spots_files/formSubmit.js"></script>
+    <script src="./Spots_files/cards.js"></script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+<iframe id="rokt-controller-frame" data-core-type="controller" aria-hidden="true" tabindex="-1" src="./Spots_files/index.2.6269.0.html" name="3453e5b0-137f-42ee-80c7-e25cd180ae65" style="width: 0px !important; height: 0px !important; border-width: 0px !important; overflow: hidden !important; opacity: 0 !important; pointer-events: none !important; position: absolute !important; z-index: -1 !important;"></iframe><iframe name="integration_type=preload_persistent&amp;init_timestamp=1763747191174&amp;plugin_name=dcui" src="./Spots_files/index.html" id="dcui" style="display: none;"></iframe></body><div data-klarna-plugin-views-container=""><template shadowrootmode="closed"><div style="position: fixed; left: 0px; top: 0px; z-index: 2147483647;"><div class="css-175oi2r" style="opacity: 0; transform: scale(0.88) translateX(2128.5px) translateY(-75.2px);"><div class="react-draggable" style="top: 24px; right: 24px; border-radius: 16px; height: 94vh; background-color: rgb(245, 245, 247); position: fixed; width: 375px; z-index: 2; will-change: transform; transition: transform 120ms ease-out allow-discrete, opacity 300ms, display 300ms; display: none; opacity: 0; box-sizing: border-box; transform: translate(0px, 0px);"><div style="flex: 1 1 0%; display: flex; height: 100vh; align-items: center; justify-content: center;"><svg viewBox="0 0 100 100" style="width: 100px; height: 100px;"><style>@keyframes klarna-loader-animation-dotted {0%, 100% { transform: translateY(0); }50% { transform: translateY(-10%); }}</style><circle cx="11.5" cy="50" r="11.5" style="fill: rgb(11, 5, 29); animation: 0.8s ease-in-out 0s infinite normal none running klarna-loader-animation-dotted;"></circle><circle cx="50" cy="50" r="11.5" style="fill: rgb(11, 5, 29); animation: 0.8s ease-in-out 0.2s infinite normal none running klarna-loader-animation-dotted;"></circle><circle cx="88.5" cy="50" r="11.5" style="fill: rgb(11, 5, 29); animation: 0.8s ease-in-out 0.4s infinite normal none running klarna-loader-animation-dotted;"></circle></svg></div><div style="box-sizing: border-box; display: flex; align-items: stretch; flex-direction: column; flex-shrink: 0; border-style: solid; border-width: 0px; position: absolute; z-index: 0; min-height: 0px; min-width: 0px; transition-property: opacity; transition-timing-function: ease-out; transition-duration: 300ms; transition-delay: 10ms; inset: 0px; opacity: 0;"><div class="dragHandle" style="box-sizing: border-box; display: flex; align-items: stretch; flex-direction: column; flex-shrink: 0; border-style: solid; border-width: 0px; position: absolute; z-index: 999; min-height: 0px; min-width: 0px; cursor: move; height: 40px; width: 44%; align-self: flex-start; margin-left: 45px;"></div><iframe src="chrome-extension://hfapbcheiepjppjbnkphkmegjlipojba/klapp.html?klapp-id=drawer" allow="clipboard-read; clipboard-write;" style="background-color: rgb(255, 255, 255); border: none; height: 100%; width: 100%; border-radius: 16px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 0px;"></iframe></div></div></div><div class="react-draggable" style="background-color: rgb(255, 255, 255); border-radius: 16px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 0px; overflow: hidden; width: 375px; position: absolute; pointer-events: auto; will-change: transform; transition: transform 120ms ease-out allow-discrete, opacity 250ms ease-out, display 250ms ease-out; opacity: 0; display: none; transform: translate(0px, 0px); height: min(max(0px, min(410px, -48px + 100vh)), -48px + 100vh); left: max(24px, min(100vw, -399px + 100vw)); top: max(24px, min(24px, -24px + 100vh - min(max(0px, min(410px, -48px + 100vh)), -48px + 100vh))); bottom: min(-24px + 100vh - min(max(0px, min(410px, -48px + 100vh)), -48px + 100vh), 24px);"><div class="dragHandle" style="box-sizing: border-box; display: flex; align-items: stretch; flex-direction: column; flex-shrink: 0; border-style: solid; border-width: 0px; position: absolute; z-index: 999; min-height: 0px; min-width: 0px; cursor: move; height: 40px; width: 44%; align-self: flex-start; margin-left: 45px;"></div><div style="flex: 1 1 0%; display: flex; align-items: center; justify-content: center;"><svg viewBox="0 0 100 100" style="width: 100px; height: 100px;"><style>@keyframes klarna-loader-animation-dotted {0%, 100% { transform: translateY(0); }50% { transform: translateY(-10%); }}</style><circle cx="11.5" cy="50" r="11.5" style="fill: rgb(11, 5, 29); animation: 0.8s ease-in-out 0s infinite normal none running klarna-loader-animation-dotted;"></circle><circle cx="50" cy="50" r="11.5" style="fill: rgb(11, 5, 29); animation: 0.8s ease-in-out 0.2s infinite normal none running klarna-loader-animation-dotted;"></circle><circle cx="88.5" cy="50" r="11.5" style="fill: rgb(11, 5, 29); animation: 0.8s ease-in-out 0.4s infinite normal none running klarna-loader-animation-dotted;"></circle></svg></div><div style="box-sizing: border-box; display: flex; align-items: stretch; flex-direction: column; flex-shrink: 0; border-style: solid; border-width: 0px; position: relative; z-index: 0; min-height: 0px; min-width: 0px; transition-property: opacity; transition-timing-function: ease-out; transition-duration: 300ms; transition-delay: 10ms; width: 100%; height: 100%; opacity: 0;"><iframe src="chrome-extension://hfapbcheiepjppjbnkphkmegjlipojba/klapp.html?klapp-id=modals" allow="clipboard-read; clipboard-write;" style="background-color: rgb(255, 255, 255); border: none; height: 100%; width: 100%; border-radius: 16px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 0px;"></iframe></div></div><div style="box-sizing: border-box; display: flex; align-items: stretch; flex-direction: column; flex-shrink: 0; border-style: solid; border-width: 0px; position: fixed; z-index: 0; min-height: 0px; min-width: 0px; animation-duration: 250ms; animation-fill-mode: both; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 0px; max-height: calc(-60px + 100vh); width: 198px; padding: 12px 10px; background-color: rgb(245, 245, 247); border-radius: 16px; transition-property: opacity, transform, width, height; transition-timing-function: ease-out, ease-out, ease-in-out, ease-in-out; transition-duration: 250ms, 250ms, 150ms, 150ms; pointer-events: none; opacity: 0; left: max(30px, min(30px, -248px + 100vw)); top: max(30px, min(30px, -74px + 100vh)); transform: translateY(5px);"><div role="button" aria-disabled="false" tabindex="0" style="display: flex; flex-direction: column; cursor: pointer;"><div style="box-sizing: border-box; display: flex; align-items: center; flex-direction: column; flex-shrink: 0; border-style: solid; border-width: 0px; position: absolute; z-index: 0; min-height: 0px; min-width: 0px; justify-content: center; width: 24px; height: 24px; border-radius: 24px; background-color: rgb(243, 243, 247); box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 12px; top: -20px; right: -20px;"><svg aria-hidden="true" role="img" viewBox="0 0 20 20" height="20" width="20"><g fill="none" fill-rule="evenodd" transform="translate(4, 4) scale(1)"><path d="m10.945 2.045-.99-.99L6 5.01 2.045 1.055l-.99.99L5.01 6 1.055 9.955l.99.99L6 6.99l3.955 3.955.99-.99L6.99 6l3.955-3.955Z" fill="rgba(11, 5, 29, 1)" style="transition: fill 0.2s;"></path></g></svg></div></div></div></div></template></div><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
