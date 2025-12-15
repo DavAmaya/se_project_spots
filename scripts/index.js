@@ -64,6 +64,7 @@ const postCaption = postModal.querySelector(".modal__caption");
 
 // Find all close buttons
 const closeButtons = document.querySelectorAll(".modal__close-btn");
+const modalOverlay = document.querySelectorAll(".modal");
 
 //open and close modal
 function openModal(modal) {
@@ -74,9 +75,29 @@ function closeModal(modal) {
   modal.classList.remove("modal_is_opened");
 }
 
+//close button handler
 closeButtons.forEach((button) => {
   const popup = button.closest(".modal");
   button.addEventListener("click", () => closeModal(popup));
+});
+
+//overlay close handler
+modalOverlay.forEach((overlay) => {
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      closeModal(overlay);
+    }
+  });
+});
+
+//esc close handler
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeButtons.forEach((button) => {
+      const popup = button.closest(".modal");
+      closeModal(popup);
+    });
+  }
 });
 
 //open handler edit profile modal
@@ -99,8 +120,6 @@ function editProfileHandler(e) {
   profileDescription.textContent = formDescription.value;
 
   closeModal(editProfileModal);
-
-  e.target.reset();
 }
 editProfileForm.addEventListener("submit", editProfileHandler);
 
@@ -118,8 +137,6 @@ function newPostHandler(e) {
   cardsContainer.prepend(cardElement);
 
   closeModal(newPostModal);
-
-  e.target.reset();
 }
 newPostForm.addEventListener("submit", newPostHandler);
 
