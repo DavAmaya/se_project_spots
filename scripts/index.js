@@ -105,6 +105,8 @@ modalOverlays.forEach((overlay) => {
 editProfile.addEventListener("click", (e) => {
   formName.value = profileName.textContent;
   formDescription.value = profileDescription.textContent;
+
+  resetValidation(editProfileForm, config);
   openModal(editProfileModal);
 });
 
@@ -136,6 +138,9 @@ function newPostHandler(e) {
   const cardElement = getCardElement(post);
 
   cardsContainer.prepend(cardElement);
+
+  e.target.reset();
+  resetValidation(newPostForm, config);
 
   closeModal(newPostModal);
 }

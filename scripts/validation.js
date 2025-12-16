@@ -65,6 +65,18 @@ const setEventListeners = (formElement, config) => {
   });
 };
 
+function resetValidation(formElement, config) {
+  const inputs = formElement.querySelectorAll(config.inputSelector);
+  const button = formElement.querySelector(config.submitButtonSelector);
+
+  inputs.forEach((input) => {
+    hideInputError(formElement, input, config);
+  });
+
+  button.disabled = true;
+  button.classList.add(config.inactiveButtonClass);
+}
+
 const enableValidation = (config) => {
   const formList = document.querySelectorAll(config.formSelector);
   formList.forEach((formElement) => {
