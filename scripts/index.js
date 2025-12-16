@@ -64,15 +64,26 @@ const postCaption = postModal.querySelector(".modal__caption");
 
 // Find all close buttons
 const closeButtons = document.querySelectorAll(".modal__close-btn");
-const modalOverlay = document.querySelectorAll(".modal");
+const modalOverlays = document.querySelectorAll(".modal");
 
+//esc close handler
+const handleEscClose = (e) => {
+  if (e.key === "Escape") {
+    closeButtons.forEach((button) => {
+      const popup = button.closest(".modal");
+      closeModal(popup);
+    });
+  }
+};
 //open and close modal
 function openModal(modal) {
   modal.classList.add("modal_is_opened");
+  document.addEventListener("keydown", handleEscClose);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is_opened");
+  document.removeEventListener("keydown", handleEscClose);
 }
 
 //close button handler
@@ -82,22 +93,12 @@ closeButtons.forEach((button) => {
 });
 
 //overlay close handler
-modalOverlay.forEach((overlay) => {
+modalOverlays.forEach((overlay) => {
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) {
       closeModal(overlay);
     }
   });
-});
-
-//esc close handler
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closeButtons.forEach((button) => {
-      const popup = button.closest(".modal");
-      closeModal(popup);
-    });
-  }
 });
 
 //open handler edit profile modal
@@ -167,8 +168,6 @@ const getCardElement = (data) => {
   postImg.addEventListener("click", () => {
     openModal(postModal);
 
-    const postImgModal = postModal.querySelector(".modal__image");
-    const postCaption = postModal.querySelector(".modal__caption");
     postImgModal.src = postImg.src;
     postImgModal.alt = postImg.alt;
     postCaption.textContent = data.name;
@@ -176,10 +175,6 @@ const getCardElement = (data) => {
 
   return card;
 };
-
-postModalClose.addEventListener("click", () => {
-  closeModal(postModal);
-});
 
 //card setup
 initialCards.forEach((card) => {
