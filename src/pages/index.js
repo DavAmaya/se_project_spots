@@ -1,3 +1,10 @@
+import {
+  enableValidation,
+  config,
+  resetValidation,
+} from "../scripts/validation.js";
+import "./index.css";
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -38,7 +45,7 @@ const newPostClose = newPostModal.querySelector(".modal__close-btn");
 const editProfileForm = document.forms["edit-profile-form"];
 const formName = editProfileModal.querySelector("#profile-name-input");
 const formDescription = editProfileModal.querySelector(
-  "#profile-description-input"
+  "#profile-description-input",
 );
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
@@ -187,3 +194,5 @@ initialCards.forEach((card) => {
   const cardElement = getCardElement(card);
   cardsContainer["prepend"](cardElement);
 });
+
+enableValidation(config);

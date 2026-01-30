@@ -1,3 +1,5 @@
 .DS_Store
 Sprint-3-Adaptive-Web-Design-and-Working-with-Layouts/projects/se_project_spots/scripts/cards.js
 Sprint-3-Adaptive-Web-Design-and-Working-with-Layouts/projects/se_project_spots/scripts/formSubmit.js
+node_modules/
+dist/
