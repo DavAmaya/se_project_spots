@@ -26,11 +26,20 @@
       <main class="content">
         <section class="profile">
           <div class="profile__container">
-            <img
-              class="profile__avatar"
-              src="<%=require('./images/avatar.jpg')%>"
-              alt="profile avatar"
-            />
+            <div class="profile__avatar_container">
+              <img
+                class="profile__avatar"
+                src="<%=require('./images/avatar.jpg')%>"
+                alt="profile avatar"
+              />
+              <button type="button" class="profile__avatar-button">
+                <img
+                  src="<%=require('./images/white-edit-icon.svg')%>"
+                  alt="edit avatar"
+                />
+                Edit Avatar
+              </button>
+            </div>
             <div class="profile__info-container">
               <div class="profile__info">
                 <h1 class="profile__name">Bessie Coleman</h1>
@@ -118,7 +127,7 @@
                 class="modal__input-error"
               ></span>
             </label>
-            <button class="modal__submit-btn" type="submit">Save</button>
+            <button class="modal__btn" type="submit">Save</button>
           </form>
         </div>
       </div>
@@ -158,7 +167,7 @@
                 class="modal__input-error"
               ></span>
             </label>
-            <button class="modal__submit-btn" type="submit">Save</button>
+            <button class="modal__btn" type="submit">Save</button>
           </form>
         </div>
       </div>
@@ -173,6 +182,56 @@
           </button>
           <img class="modal__image" src="#" alt="" />
           <p class="modal__caption"></p>
+        </div>
+      </div>
+      <div id="delete-modal" class="modal modal_type_image-preview">
+        <div class="modal__image-container">
+          <button
+            type="button"
+            aria-label="close"
+            class="modal__close-btn modal__close-btn_post"
+          >
+            <img src="<%=require('./images/close-icon.svg')%>" alt="close" />
+          </button>
+          <form class="modal__container">
+            <p class="modal__title modal__title_delete">
+              Are you sure you want to delete this image?
+            </p>
+            <div class="modal__delete_container">
+              <button class="modal__btn modal__delete_btn" type="submit">
+                Delete
+              </button>
+              <button class="modal__btn modal__cancel_btn" type="button">
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="avatar-modal" class="modal">
+        <div class="modal__container">
+          <button type="button" aria-label="close" class="modal__close-btn">
+            <img src="<%=require('./images/close-icon.svg')%>" alt="close" />
+          </button>
+          <h2 class="modal__title">Edit Profile Avatar</h2>
+          <form novalidate id="avatar-form" class="modal__form">
+            <label for="avatar-url-input" class="modal__label">
+              Image link
+              <input
+                name="imageLink"
+                type="url"
+                class="modal__input"
+                placeholder="Paste a link to an Image"
+                required
+                id="avatar-url-input"
+              />
+              <span
+                id="avatar-url-input-error"
+                class="modal__input-error"
+              ></span>
+            </label>
+            <button class="modal__btn" type="submit">Save</button>
+          </form>
         </div>
       </div>
     </div>
