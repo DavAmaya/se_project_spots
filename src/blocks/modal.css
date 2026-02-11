@@ -10,9 +10,7 @@
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition:
-    opacity 1s linear,
-    visibility 1s linear;
+  transition: opacity 1s linear, visibility 1s linear;
 }
 
 .modal.modal_is_opened {
@@ -56,15 +54,6 @@
   text-align: left;
   line-height: 100%;
   font-size: 32px;
-}
-
-.modal__title_delete {
-  font-family: "Poppins", "Arial", "Helvetica", sans-serif;
-  color: #212121;
-  font-weight: 500;
-  font-style: normal;
-  text-align: center;
-  font-size: 24px;
 }
 
 .modal__form {
@@ -116,7 +105,7 @@
   outline: none;
 }
 
-.modal__btn {
+.modal__submit-btn {
   display: block;
   width: 156px;
   height: 52px;
@@ -136,32 +125,6 @@
 .modal__submit-btn:hover {
   background-color: #212121cc;
   cursor: pointer;
-}
-
-.modal__delete_container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.modal__delete_btn {
-  background-color: #ff6565;
-  color: #212121;
-}
-
-.modal__delete_btn:hover {
-  background-color: #ff3333;
-}
-
-.modal__cancel_btn {
-  background-color: #fff;
-  color: #212121;
-  border: solid 1px #212121;
-}
-
-.modal__cancel_btn:hover {
-  background-color: #212121;
-  color: #fff;
 }
 
 /* Post modal */
@@ -245,10 +208,5 @@
     top: -38px;
     right: 0px;
     opacity: 1;
-  }
-
-  .modal__delete_container {
-    flex-direction: column;
-    align-items: center;
   }
 }

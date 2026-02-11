@@ -2,7 +2,7 @@
 export const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
-  submitButtonSelector: ".modal__btn",
+  submitButtonSelector: ".modal__submit-btn",
   inactiveButtonClass: "modal__submit-btn_inactive",
   inputErrorClass: "form__input_type_error",
   errorClass: "form__input-error_active",
