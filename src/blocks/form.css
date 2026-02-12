@@ -1,0 +1,14 @@
+.form__input_type_error {
+  border: 1px solid #ff000099;
+  margin-bottom: 8px;
+}
+
+.form__input-error_active {
+  color: #ff000099;
+  margin: 0;
+  font-family: "Poppins", "Arial", "Helvetica", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+}
