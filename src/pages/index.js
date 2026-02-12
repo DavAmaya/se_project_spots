@@ -55,7 +55,7 @@ api
   .then(([cards, user]) => {
     cards.forEach((card) => {
       const cardEl = getCardElement(card);
-      cardsContainer["prepend"](cardEl);
+      cardsContainer["append"](cardEl);
     });
     profileName.textContent = user.name;
     profileDescription.textContent = user.about;
@@ -84,7 +84,7 @@ function handleAvatarSubmit(e) {
       closeModal(avatarModal);
 
       e.target.reset();
-      resetValidation(newPostForm, config);
+      resetValidation(avatarForm, config);
     })
     .catch((err) => console.error(`Error: ${err}`))
     .finally(() => {
