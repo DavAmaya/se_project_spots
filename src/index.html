@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Spots</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="David Amaya Hernandez" />
+    <meta
+      name="description"
+      content="Spots is a social app where you can post your favorite images and share them with your friends. You can also comment on other people's posts and like them."
+    />
+    <meta
+      name="keywords"
+      content="Spots, friends, photos, photo sharing, social media app"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          class="header__logo"
+          src="<%=require('./images/header-spots-logo.svg')%>"
+          alt="Spots Logo"
+        />
+      </header>
+      <main class="content">
+        <section class="profile">
+          <div class="profile__container">
+            <img
+              class="profile__avatar"
+              src="<%=require('./images/avatar.jpg')%>"
+              alt="profile avatar"
+            />
+            <div class="profile__info-container">
+              <div class="profile__info">
+                <h1 class="profile__name">Bessie Coleman</h1>
+                <p class="profile__description">
+                  Known mononymously as Akon (/ˈeɪkɒn/), is a
+                  Senegalese-American singer, record producer, and entrepreneur.
+                  An influential figure in modern world music, he is best known
+                  for
+                </p>
+              </div>
+              <button type="button" class="profile__edit-button">
+                <img
+                  src="<%=require('./images/edit-icon.svg')%>"
+                  alt="edit profile"
+                />
+                Edit Profile
+              </button>
+            </div>
+          </div>
+          <button type="button" class="profile__add-button">
+            <img src="<%=require('./images/plus-icon.svg')%>" alt="add post" />
+            New Post
+          </button>
+        </section>
+        <section class="cards">
+          <ul class="cards__list">
+            <template id="cards__template">
+              <li class="card">
+                <button type="button" class="card__delete-button"></button>
+                <img class="card__image" alt="" />
+                <div class="card__info">
+                  <h2 class="card__title"></h2>
+                  <button
+                    type="button"
+                    aria-label="like"
+                    class="card__like-button"
+                  ></button>
+                </div>
+              </li>
+            </template>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__text">2025 © David Amaya</p>
+      </footer>
+      <div id="edit-profile-modal" class="modal">
+        <div class="modal__container">
+          <button type="button" aria-label="close" class="modal__close-btn">
+            <img src="<%=require('./images/close-icon.svg')%>" alt="close" />
+          </button>
+          <h2 class="modal__title">Edit Profile</h2>
+          <form novalidate id="edit-profile-form" class="modal__form">
+            <label for="profile-name-input" class="modal__label">
+              Name
+              <input
+                name="name"
+                type="text"
+                class="modal__input"
+                required
+                minlength="2"
+                maxlength="40"
+                placeholder="Type your name"
+                id="profile-name-input"
+              />
+              <span
+                id="profile-name-input-error"
+                class="modal__input-error"
+              ></span>
+            </label>
+            <label for="profile-description-input" class="modal__label">
+              Description
+              <input
+                name="description"
+                type="text"
+                class="modal__input"
+                required
+                minlength="2"
+                maxlength="200"
+                placeholder="Describe yourself"
+                id="profile-description-input"
+              />
+              <span
+                id="profile-description-input-error"
+                class="modal__input-error"
+              ></span>
+            </label>
+            <button class="modal__submit-btn" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+      <div id="new-post-modal" class="modal">
+        <div class="modal__container">
+          <button type="button" aria-label="close" class="modal__close-btn">
+            <img src="<%=require('./images/close-icon.svg')%>" alt="close" />
+          </button>
+          <h2 class="modal__title">New post</h2>
+          <form novalidate id="new-post-form" class="modal__form">
+            <label for="post-url-input" class="modal__label">
+              Image link
+              <input
+                name="imageLink"
+                type="url"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+                required
+                id="post-url-input"
+              />
+              <span id="post-url-input-error" class="modal__input-error"></span>
+            </label>
+            <label for="post-caption-input" class="modal__label">
+              Caption
+              <input
+                name="caption"
+                type="text"
+                class="modal__input"
+                required
+                minlength="2"
+                maxlength="30"
+                placeholder="Type your caption"
+                id="post-caption-input"
+              />
+              <span
+                id="post-caption-input-error"
+                class="modal__input-error"
+              ></span>
+            </label>
+            <button class="modal__submit-btn" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+      <div id="post-modal" class="modal modal_type_image-preview">
+        <div class="modal__image-container">
+          <button
+            type="button"
+            aria-label="close"
+            class="modal__close-btn modal__close-btn_post"
+          >
+            <img src="<%=require('./images/close-icon.svg')%>" alt="close" />
+          </button>
+          <img class="modal__image" src="#" alt="" />
+          <p class="modal__caption"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -35,7 +35,7 @@
   border: none;
   top: 27px;
   right: 50px;
-  opacity: 40%;
+  opacity: 0.4;
   transition: opacity 0.2s ease-in-out;
   cursor: pointer;
 }
@@ -127,6 +127,53 @@
   cursor: pointer;
 }
 
+/* Post modal */
+.modal_type_image-preview {
+  padding: 16px;
+}
+
+.modal__image-container {
+  padding: 0;
+  position: relative;
+}
+
+.modal__image {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal__caption {
+  margin: 0;
+  padding: 4px 8px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #fff;
+  position: absolute;
+  background-color: #212121;
+  border-radius: 8px;
+  left: 0;
+  top: calc(100% + 10px);
+}
+
+.modal__close-btn_post {
+  top: -8px;
+  right: -52px;
+  opacity: 1;
+  padding: 0;
+}
+
+.modal__close-btn_post:hover {
+  opacity: 0.4;
+}
+
+.modal__submit-btn_inactive {
+  opacity: 0.4;
+}
+
 @media screen and (max-width: 630px) and (min-width: 320px) {
   .modal__input {
     font-size: 16px;
@@ -155,5 +202,11 @@
   .modal__close-btn {
     top: 1px;
     right: 1px;
+  }
+
+  .modal__close-btn_post {
+    top: -38px;
+    right: 0px;
+    opacity: 1;
   }
 }
